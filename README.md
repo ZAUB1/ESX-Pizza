@@ -8,6 +8,8 @@ This script belongs to me, you can modify it and use it as long as you mention m
 
 Do not hesitate to join my discord: https://discord.gg/yFuSEGj, and contact me directly for any bug or suggestions.
 
+-----------------------------------------------
+
 [FR]
 Job de livreur de pizza pour le core ESX de FiveM
 
