@@ -11,7 +11,7 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 --EVENTS--
 
 RegisterServerEvent('pizza:pourboire') --Paie a la livraison d'une pizza + pourboire eventuel
-AddEventHandler('pizza:pourboire',function(pourboire)
+AddEventHandler('pizza:pourboire', function(pourboire)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 
