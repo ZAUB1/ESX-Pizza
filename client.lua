@@ -75,7 +75,7 @@ Citizen.CreateThread(function() --Thread d'ajout du point de la pizzeria sur la 
 	
 end)
 
-Citizen.CreateThread(function() --Thread lancement + livraison depuis le marker jaune
+Citizen.CreateThread(function() --Thread lancement + livraison depuis le marker vert
 	while true do
 
 		Citizen.Wait(0)
