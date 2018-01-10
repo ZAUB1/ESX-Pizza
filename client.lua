@@ -197,7 +197,7 @@ Citizen.CreateThread(function() --Thread lancement + livraison depuis le marker 
 		end
 			DrawMarker(1,pizzeria.x,pizzeria.y,pizzeria.z, 0, 0, 0, 0, 0, 0, 1.5001, 1.5001, 0.6001,0,255,0, 200, 0, 0, 0, 0)
 				
-				if GetDistanceBetweenCoords(pizzeria.x,pizzeria.y,pizzeria.z, GetEntityCoords(GetPlayerPed(-1),true)) < 3 then
+				if GetDistanceBetweenCoords(pizzeria.x,pizzeria.y,pizzeria.z, GetEntityCoords(GetPlayerPed(-1),true)) < 3 and afaitunepizzamin == true then
 					HelpText("Appuyez sur ~INPUT_CONTEXT~ pour recuperer les pizzas",0,1,0.5,0.8,0.6,255,255,255,255)
 					
 					if IsVehicleModel(GetVehiclePedIsIn(GetPlayerPed(-1), true), GetHashKey("faggio2"))  then
