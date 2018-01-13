@@ -205,6 +205,8 @@ Citizen.CreateThread(function() --Thread lancement + livraison depuis le marker 
 						if IsControlJustPressed(1,38) then
 							
 							if IsInVehicle() then
+								
+								afaitunepizzamin = false
 
 								TriggerEvent("pNotify:SendNotification", {
 									text = "Nous vous remercions de votre travail, voici votre paie : " .. paie .. "$",
