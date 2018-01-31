@@ -75,7 +75,7 @@ local livpt = { --Configuration des points de livraisons (repris ceux de Maykell
 }
 
 local blips = {
-  {title="Pizzeria", colour=6, id=417, x = -1285.73, y = -1387.15, z = 3.44}, --Configuration du point sur la carte
+  {title="Pizzeria", colour=51, id=103, x = -1285.73, y = -1387.15, z = 3.44}, --Configuration du point sur la carte
 }
 
 local coefflouze = 0.1 --Coeficient multiplicateur qui en fonction de la distance definit la paie
