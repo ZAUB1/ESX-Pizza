@@ -13,20 +13,7 @@ Citizen.CreateThread(function()
   end
 end)
 
-local Licenses                = {}
-local requirePermis = nil
-RegisterNetEvent('esx_job:loadLicenses')
-AddEventHandler('esx_job:loadLicenses', function (licenses)
-  Licenses = {}
-  Licenses = licenses
-end)
 
-local plateJob = nil
-
-RegisterNetEvent('esx_jobs:getPlate')
-AddEventHandler('esx_jobs:getPlate', function(plateJobChecked)
-  plateJob = plateJobChecked
-end)
 
 
 local nbPizza = 0
@@ -140,21 +127,6 @@ Citizen.CreateThread(function() --Thread lancement + livraison depuis le marker 
         HelpText("Appuyez sur ~INPUT_CONTEXT~ pour lancer la livraison de ~r~pizza",0,1,0.5,0.8,0.6,255,255,255,255)
 
         if IsControlJustPressed(1,38) then
-          local ownedLicenses = {}
-          local havePermis = false
-          if requirePermis ~= nil then
-            for i=1, #Licenses, 1 do
-              ownedLicenses[Licenses[i].type] = true
-              if Licenses[i].type == requirePermis then
-                havePermis = true
-              end
-            end
-          else
-            havePermis = true
-          end
-
-
-          if havePermis then
             notif = true
             isInJobPizz = true
             isToHouse = true
@@ -171,15 +143,6 @@ Citizen.CreateThread(function() --Thread lancement + livraison depuis le marker 
             nbPizza = math.random(1, 3)
 
             TriggerServerEvent("pizza:itemadd", nbPizza)
-          else
-            TriggerEvent("pNotify:SendNotification", {
-              text = "Vous n'avez pas le permis adéquate",
-              type = "error",
-              queue = "global",
-              timeout = 10000,
-              layout = "bottomRight"
-            })
-          end
         end
       end
     end
@@ -459,7 +422,7 @@ function spawn_faggio() -- Thread spawn faggio
     Wait(1)
   end
 
-  local plate = math.random(100, 900)
+  local plateJob = math.random(1000, 9999)
   local spawned_car = CreateVehicle(vehicle, spawnfaggio.x,spawnfaggio.y,spawnfaggio.z, 431.436, - 996.786, 25.1887, true, false)
 
   local plate = "PIZZ"..plateJob
@@ -469,11 +432,6 @@ function spawn_faggio() -- Thread spawn faggio
   SetVehicleLivery(spawned_car, 2)
   SetPedIntoVehicle(myPed, spawned_car, - 1)
   SetModelAsNoLongerNeeded(vehicle)
-
-  local vehicle = GetVehiclePedIsIn(myPed, false)
-  local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
-  vehicleProps.plate = plate
-  TriggerServerEvent('esx_rebelcarshop:setVehicleOwned', vehicleProps)
 
   Citizen.InvokeNative(0xB736A491E64A32CF, Citizen.PointerValueIntInitialized(spawned_car))
 end
