@@ -37,11 +37,11 @@ AddEventHandler("pizza:paiefinale", function()
 end)
 
 RegisterServerEvent("pizza:itemadd") --Ajout temporaire de l'item "pizza"
-AddEventHandler("pizza:itemadd", function()
+AddEventHandler("pizza:itemadd", function(nbPizza)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 
-	xPlayer.addInventoryItem('pizza', 1)
+	xPlayer.addInventoryItem('pizza', tonumber(nbPizza))
 end)
 
 RegisterServerEvent("pizza:itemrm") --Rm de l'item "pizza"
@@ -50,4 +50,12 @@ AddEventHandler("pizza:itemrm", function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 
 	xPlayer.removeInventoryItem('pizza', 1)
+end)
+
+RegisterServerEvent("pizza:deleteAllPizz") --Rm de l'item "pizza"
+AddEventHandler("pizza:deleteAllPizz", function()
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+	xPlayer.removeInventoryItem('pizza', xPlayer.getInventoryItem('pizza').count)
+)
 end)
