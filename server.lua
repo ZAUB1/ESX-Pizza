@@ -56,6 +56,8 @@ RegisterServerEvent("pizza:deleteAllPizz") --Rm de l'item "pizza"
 AddEventHandler("pizza:deleteAllPizz", function()
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
-	xPlayer.removeInventoryItem('pizza', xPlayer.getInventoryItem('pizza').count)
-)
+		
+	local pizzanbr = xPlayer.getInventoryItem('pizza').count
+	
+	xPlayer.removeInventoryItem('pizza', pizzanbr)
 end)
