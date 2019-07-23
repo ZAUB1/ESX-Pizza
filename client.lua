@@ -154,13 +154,9 @@ Citizen.CreateThread(function()
 
             while notif == true do
 
-                TriggerEvent("pNotify:SendNotification", {
-                    text = _U('deliver_text_1') .. destinol .. _U('deliver_text_2'),
-                    type = "info",
-                    queue = "global",
-                    timeout = 4000,
-                    layout = "bottomRight"
-                })
+                ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
+                        _U('deliver_text_1') .. destinol .. _U('deliver_text_2'), -- message
+                        Config.ContactPhoto, 9) -- contact photo, symbol
 
                 notif = false
 
@@ -185,13 +181,9 @@ Citizen.CreateThread(function()
 
                         pourboire = math.random(100, 200)
 
-                        TriggerEvent("pNotify:SendNotification", {
-                            text = _U('tip') .. pourboire .. _U('currency'),
-                            type = "success",
-                            queue = "global",
-                            timeout = 4000,
-                            layout = "bottomRight"
-                        })
+                        ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
+                                _U('tip') .. pourboire .. _U('currency'), -- message
+                                Config.ContactPhoto, 9) -- contact photo, symbol
 
                         TriggerServerEvent("pizza:pourboire", pourboire)
 
@@ -227,13 +219,9 @@ Citizen.CreateThread(function()
             while notif2 == true do
                 SetNewWaypoint(pizzeria.x, pizzeria.y)
 
-                TriggerEvent("pNotify:SendNotification", {
-                    text = _U('directions'),
-                    type = "info",
-                    queue = "global",
-                    timeout = 4000,
-                    layout = "bottomRight"
-                })
+                ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
+                        _U('directions'), -- message
+                        Config.ContactPhoto, 9) -- contact photo, symbol
 
                 notif2 = false
 
@@ -251,13 +239,9 @@ Citizen.CreateThread(function()
 
                             afaitunepizzamin = false
 
-                            TriggerEvent("pNotify:SendNotification", {
-                                text = _U('payout') .. paie .. _U('currency'),
-                                type = "success",
-                                queue = "global",
-                                timeout = 4000,
-                                layout = "bottomRight"
-                            })
+                            ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
+                                    _U('payout') .. paie .. _U('currency'), -- message
+                                    Config.ContactPhoto, 9) -- contact photo, symbol
 
                             TriggerServerEvent("pizza:pourboire", paie)
 
@@ -283,13 +267,9 @@ Citizen.CreateThread(function()
 
                             while notifmoto1 == true do
 
-                                TriggerEvent("pNotify:SendNotification", {
-                                    text = _U('forgot_bike'),
-                                    type = "error",
-                                    queue = "global",
-                                    timeout = 4000,
-                                    layout = "bottomRight"
-                                })
+                                ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
+                                        _U('forgot_bike'), -- message
+                                        Config.ContactPhoto, 9) -- contact photo, symbol
 
                                 notifmoto1 = false
 
@@ -302,13 +282,9 @@ Citizen.CreateThread(function()
 
                     while notifmoto2 == true do
 
-                        TriggerEvent("pNotify:SendNotification", {
-                            text = _U('forgot_bike'),
-                            type = "error",
-                            queue = "global",
-                            timeout = 4000,
-                            layout = "bottomRight"
-                        })
+                        ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
+                                _U('forgot_bike'), -- message
+                                Config.ContactPhoto, 9) -- contact photo, symbol
 
                         notifmoto2 = false
 
@@ -365,13 +341,9 @@ Citizen.CreateThread(function()
                         SetEntityAsMissionEntity(vehicleu, true, true)
                         deleteCar(vehicleu)
 
-                        TriggerEvent("pNotify:SendNotification", {
-                            text = _U('thanks_no_check'),
-                            type = "success",
-                            queue = "global",
-                            timeout = 4000,
-                            layout = "bottomRight"
-                        })
+                        ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
+                                _U('thanks_no_check'), -- message
+                                Config.ContactPhoto, 9) -- contact photo, symbol
 
                         TriggerServerEvent("pizza:paiefinale")
 
@@ -386,13 +358,10 @@ Citizen.CreateThread(function()
                         SetEntityAsMissionEntity(vehicleu, true, true)
                         deleteCar(vehicleu)
 
-                        TriggerEvent("pNotify:SendNotification", {
-                            text = _U('thanks_for_nothing'),
-                            type = "error",
-                            queue = "global",
-                            timeout = 4000,
-                            layout = "bottomRight"
-                        })
+                        ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
+                                _U('thanks_for_nothing'), -- message
+                                Config.ContactPhoto, 9) -- contact photo, symbol
+
                     end
                 end
             end

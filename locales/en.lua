@@ -15,4 +15,5 @@ Locales['en'] = {
     ['thanks_no_check'] = "Thanks for your work, have a good day.",
     ['thanks_for_nothing'] = "Thanks anyway (for nothing). Have a good day.",
     ['final_bonus'] = "Here is your final bonus: ",
+    ['delivery'] = "Delivery",
 }

@@ -15,4 +15,5 @@ Locales['fr'] = {
     ['thanks_no_check'] = "Merci d'avoir travaillé, bonne journée.",
     ['thanks_for_nothing'] = "Merci quand même (pour rien), bonne journée.",
     ['final_bonus'] = "Voici votre petit bonus final: ",
+    ['delivery'] = "Livraison",
 }

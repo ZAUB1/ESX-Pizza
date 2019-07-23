@@ -1,20 +1,19 @@
 # ESX-Pizza
-[EN]
-Pizza delivery job for the ESX core
+
+## English
+Pizza delivery job for the ESX core, now with translations, config and stock notifications!
 
 This is an all-purpose job (which means that it is not considered as a normal job, but more like a little job when there's nothing to do, or a secondary job for the public services)
 
-This script belongs to me, you can modify it and use it as long as you mention me
+This script belongs to me, you can modify it and use it as long as you mention me.
 
 Do not hesitate to join my discord: https://discord.gg/yFuSEGj, and contact me directly for any bug or suggestions.
 
 REQUIREMENTS : 
 - ES Extended : https://github.com/ESX-Org/es_extended
-- pNotify : https://github.com/Nick78111/pNotify
 
------------------------------------------------
+## Français
 
-[FR]
 Job de livreur de pizza pour le core ESX de FiveM
 
 Job disponible à tout le monde (il n'est pas consideré comme un job réél, mais plus comme un petit farm disponible quand il n'y a rien d'autre a faire par exemple, ou en tant que job secondaire pour les services publics)
@@ -25,4 +24,3 @@ N'hesitez pas a rejoindre mon discord : https://discord.gg/yFuSEGj, et a me cont
 
 REQUIS : 
 - ES Extended : https://github.com/ESX-Org/es_extended
-- pNotify : https://github.com/Nick78111/pNotify
