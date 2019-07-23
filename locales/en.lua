@@ -7,7 +7,7 @@ Locales['en'] = {
     ['deliver_help'] = "Press ~INPUT_CONTEXT~ to deliver the ~r~pizza~s~.",
     ['tip'] = "A small tip: ",
     ['currency'] = "$",
-    ['directions'] = "Go to the shop!",
+    ['next_order'] = "Come back to the shop. There is another order to deliver!",
     ['retrieve_pizza'] = "Press ~INPUT_CONTEXT~ to retrieve the ~r~pizzas~s~.",
     ['payout'] = "Thanks you for your work! Here is your paycheck: ",
     ['forgot_bike'] = "Did you forget the bike?",
@@ -16,4 +16,5 @@ Locales['en'] = {
     ['thanks_for_nothing'] = "Thanks anyway (for nothing). Have a good day.",
     ['final_bonus'] = "Here is your final bonus: ",
     ['delivery'] = "Delivery",
+    ['new_delivery'] = "New delivery",
 }

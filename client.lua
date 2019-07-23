@@ -219,8 +219,8 @@ Citizen.CreateThread(function()
             while notif2 == true do
                 SetNewWaypoint(pizzeria.x, pizzeria.y)
 
-                ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('delivery'), -- title, subtitle
-                        _U('directions'), -- message
+                ESX.ShowAdvancedNotification(_U('pizza_shop'), _U('new_delivery'), -- title, subtitle
+                        _U('next_order'), -- message
                         Config.ContactPhoto, 9) -- contact photo, symbol
 
                 notif2 = false
