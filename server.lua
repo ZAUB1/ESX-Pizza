@@ -27,13 +27,11 @@ AddEventHandler("pizza:paiefinale", function()
 
 	xPlayer.addMoney(flouzefin)
 
-	TriggerClientEvent("pNotify:SendNotification", source, {
-		text = "Voici votre petit bonus final : " .. flouzefin .. "$",
-		type = "success",
-		queue = "global",
-		timeout = 4000,
-		layout = "bottomRight"
-	})
+	TriggerClientEvent('esx:showAdvancedNotification', source,
+			_U('pizza_shop'), _U('delivery'), -- title, subtitle
+			_U('final_bonus') .. flouzefin .. _U('currency'), -- message
+			Config.ContactPhoto, 9) -- contact photo, symbol
+
 end)
 
 RegisterServerEvent("pizza:itemadd") --Ajout temporaire de l'item "pizza"
